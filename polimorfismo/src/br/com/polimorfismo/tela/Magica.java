@@ -1,4 +1,4 @@
-package br.com.ecommerce.tela;
+package br.com.polimorfismo.tela;
 
 import javax.swing.JOptionPane;
 
@@ -6,6 +6,10 @@ public class Magica {
 
 	public static String s(String msg) {
 		return JOptionPane.showInputDialog(msg).toUpperCase();
+	}
+	
+	public static double d(String msg) {
+		return Double.parseDouble(JOptionPane.showInputDialog(msg));
 	}
 	
 	public static int i(String msg) {
@@ -24,5 +28,6 @@ public class Magica {
 		}else {
 			return false;
 		}
-	}
 }
+}
+
