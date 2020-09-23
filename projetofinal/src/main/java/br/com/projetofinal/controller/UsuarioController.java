@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -13,6 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
 import br.com.projetofinal.beans.Usuario;
 import br.com.projetofinal.dao.UsuarioDAO;
 
+@CrossOrigin("*") //metodo que libera acesso para outras pessoas acessarem a rest controller no tomcat
 //essa annotation é a que indica que essa classe é uma controller
 //controller é responsavel por levar os items para o BD e vice versa
 @RestController
@@ -44,6 +46,7 @@ public class UsuarioController {
 		}
 		return ResponseEntity.ok(resposta);
 	}
+	
 	
 	
 	@GetMapping("/usuarios") //essa e a URL que vou usar para chamar o metodo
